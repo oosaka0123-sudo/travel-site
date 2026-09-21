@@ -333,69 +333,107 @@
   const now = new Date();
   const d = Math.ceil((trip-now)/(1000*60*60*24));
   const c = document.getElementById('countdown');
-  if(c){ c.textContent = d>0 ? '出発まであと '+d+'日' : (d===0?'今日出発':'TRIP'); }
+  if(c){
+    c.textContent = d>0 ? '出発まであと '+d+'日' : (d===0 ? '今日出発' : 'TRIP');
+  }
+
   document.querySelectorAll('input[type=checkbox][data-k]').forEach(el=>{
     const k='awaji-'+el.dataset.k;
-    el.checked=localStorage.getItem(k)==='1';
-    el.addEventListener('change',()=>localStorage.setItem(k,el.checked?'1':'0'));
+    try{
+      el.checked=localStorage.getItem(k)==='1';
+      el.addEventListener('change',()=>{
+        localStorage.setItem(k,el.checked?'1':'0');
+      });
+    }catch(e){}
+  });
+
+  document.querySelectorAll('.rank-card img').forEach(img=>{
+    img.addEventListener('error',()=>img.classList.add('is-broken'));
+  });
+
+  document.querySelectorAll('.choice-row').forEach(row=>{
+    const want=row.querySelector('.want-all');
+    const dont=row.querySelector('.dont-all');
+    if(!want || !dont) return;
+
+    const id=want.dataset.want;
+    const counts=document.querySelector('.vote-counts[data-votes="'+id+'"]');
+    const choiceKey='awaji-choice-'+id;
+    const wantKey='awaji-votes-want-'+id;
+    const dontKey='awaji-votes-dont-'+id;
+
+    function getNum(key){
+      try{
+        const n=parseInt(localStorage.getItem(key)||'0',10);
+        return Number.isFinite(n) ? n : 0;
+      }catch(e){
+        return 0;
+      }
+    }
+
+    function getChoice(){
+      try{
+        return localStorage.getItem(choiceKey)||'';
+      }catch(e){
+        return '';
+      }
+    }
+
+    function setItem(key,value){
+      try{
+        localStorage.setItem(key,value);
+      }catch(e){}
+    }
+
+    function render(){
+      const choice=getChoice();
+      const wc=getNum(wantKey);
+      const dc=getNum(dontKey);
+
+      want.classList.toggle('active',choice==='want');
+      dont.classList.toggle('active',choice==='dont');
+
+      want.textContent=choice==='want' ? '♥ 行きたい済み' : '♡ 行きたい';
+      dont.textContent=choice==='dont' ? '× 行きたくない済み' : '× 行きたくない';
+
+      want.setAttribute('aria-pressed',choice==='want' ? 'true' : 'false');
+      dont.setAttribute('aria-pressed',choice==='dont' ? 'true' : 'false');
+
+      if(counts){
+        const wb=counts.querySelector('.want-c b');
+        const db=counts.querySelector('.dont-c b');
+        if(wb) wb.textContent=wc+'票';
+        if(db) db.textContent=dc+'票';
+      }
+    }
+
+    function switchVote(next){
+      const prev=getChoice();
+      let wc=getNum(wantKey);
+      let dc=getNum(dontKey);
+
+      if(prev===next){
+        if(next==='want') wc=Math.max(0,wc-1);
+        if(next==='dont') dc=Math.max(0,dc-1);
+        setItem(choiceKey,'');
+      }else{
+        if(prev==='want') wc=Math.max(0,wc-1);
+        if(prev==='dont') dc=Math.max(0,dc-1);
+        if(next==='want') wc++;
+        if(next==='dont') dc++;
+        setItem(choiceKey,next);
+      }
+
+      setItem(wantKey,String(wc));
+      setItem(dontKey,String(dc));
+      render();
+    }
+
+    want.addEventListener('click',()=>switchVote('want'));
+    dont.addEventListener('click',()=>switchVote('dont'));
+    render();
   });
 })();
-document.querySelectorAll('.rank-card img').forEach(img=>{img.addEventListener('error',()=>img.classList.add('is-broken'));});
-document.querySelectorAll('.choice-row').forEach(row=>{
-  const want=row.querySelector('.want-all');
-  const dont=row.querySelector('.dont-all');
-  if(!want||!dont)return;
-  const id=want.dataset.want;
-  const choiceKey='awaji-choice-'+id;
-  const wantKey='awaji-votes-want-'+id;
-  const dontKey='awaji-votes-dont-'+id;
-  const counts=document.querySelector('.vote-counts[data-votes="'+id+'"]');
-  const render=()=>{
-    const choice=localStorage.getItem(choiceKey)||'';
-    const wc=parseInt(localStorage.getItem(wantKey)||'0',10);
-    const dc=parseInt(localStorage.getItem(dontKey)||'0',10);
-    want.classList.toggle('active',choice==='want');
-    dont.classList.toggle('active',choice==='dont');
-    want.textContent=choice==='want'?'♥ 行きたい済み':'♡ 行きたい';
-    dont.textContent=choice==='dont'?'× 行きたくない済み':'× 行きたくない';
-    want.setAttribute('aria-pressed',choice==='want'?'true':'false');
-    dont.setAttribute('aria-pressed',choice==='dont'?'true':'false');
-    if(counts){
-      const wb=counts.querySelector('.want-c b');
-      const db=counts.querySelector('.dont-c b');
-      if(wb)wb.textContent=wc+'票';
-      if(db)db.textContent=dc+'票';
-    }
-  };
-  const switchVote=(next)=>{
-    const prev=localStorage.getItem(choiceKey)||'';
-    let wc=parseInt(localStorage.getItem(wantKey)||'0',10);
-    let dc=parseInt(localStorage.getItem(dontKey)||'0',10);
-
-    if(prev===next){
-      if(next==='want' && wc>0) wc--;
-      if(next==='dont' && dc>0) dc--;
-      localStorage.setItem(choiceKey,'');
-    }else{
-      if(prev==='want' && wc>0) wc--;
-      if(prev==='dont' && dc>0) dc--;
-      if(next==='want') wc++;
-      if(next==='dont') dc++;
-      localStorage.setItem(choiceKey,next);
-    }
-    localStorage.setItem(wantKey,String(wc));
-    localStorage.setItem(dontKey,String(dc));
-    render();
-  };
-  want.addEventListener('click',()=>switchVote('want'));
-  dont.addEventListener('click',()=>switchVote('dont'));
-  render();
-});
-
-  dont.addEventListener('click',()=>{localStorage.setItem(key,localStorage.getItem(key)==='dont'?'':'dont');sync();});
-  sync();
-});
-});
 </script>
 </body>
 </html>
