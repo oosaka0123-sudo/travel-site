@@ -9,7 +9,7 @@
 <style>
 :root{--bg:#07131b;--panel:#0d1d28;--panel2:#132936;--text:#f7f5ef;--muted:#9db0bc;--line:rgba(255,255,255,.1);--accent:#ff9d52;--star:#ffd76a}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.6;padding-bottom:32px}.wrap{width:min(100% - 24px,760px);margin:auto}a{color:inherit}header{padding:28px 0 18px}h1{font-size:34px;line-height:1.15;margin:0 0 8px}.sub{color:var(--muted);margin:0}.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--muted);font-weight:800}.day{margin:28px 0 12px}.day small{display:block;color:var(--accent);font-weight:900;letter-spacing:.12em}.day h2{margin:2px 0 0;font-size:25px}.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin:14px 0}.card-body{padding:18px}.rank{display:flex;gap:11px;align-items:flex-start}.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#111;font-weight:950;flex:0 0 auto}.rank h3{margin:0;font-size:22px}.stars{margin-top:5px;color:var(--star);font-size:18px;font-weight:950;letter-spacing:.08em}.stars span{color:#d7e0e5;font-size:13px;margin-left:6px;letter-spacing:0}.price{margin:8px 0 0;color:var(--muted);font-size:12px;font-weight:800}.price strong{color:#fff;font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}.tags span{padding:6px 9px;border-radius:999px;background:var(--panel2);font-size:12px;font-weight:800}.reason{margin:10px 0 0;font-size:14px;color:#e8edef}.actions{display:grid;grid-template-columns:1.4fr 1fr;gap:9px;margin-top:16px}.btn{min-height:56px;border-radius:15px;display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;font-weight:900;padding:10px}.go{background:#f7f5ef;color:#07131b}.web{background:var(--panel2)}.legend{background:#0b1a23;border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:18px 0;color:var(--muted);font-size:13px}.legend b{color:#fff}.foot{color:var(--muted);font-size:11px;padding:18px 0 28px;text-align:center}@media(max-width:380px){.actions{grid-template-columns:1fr}.stars{font-size:17px}}
-</style>
+.want{margin-top:9px;width:100%;min-height:52px;border:1px solid rgba(255,255,255,.14);border-radius:15px;background:#1b2d38;color:#fff;font-weight:950;font-size:15px}.want.active{background:#ff9d52;color:#111;border-color:#ff9d52}.want:focus-visible{outline:3px solid #fff;outline-offset:2px}</style>
 </head>
 <body>
 <div class="wrap">
@@ -28,6 +28,7 @@
 <div class="rank"><div class="num">1</div><div><h3>絶景レストラン うずの丘</h3><div class="stars">★★★★☆☆ <span>4/6</span></div><p class="price">おおよそ <strong>¥1,650〜2,530</strong></p></div></div>
 <div class="tags"><span>絶景</span><span>海鮮</span><span>動線◎</span></div>
 <p class="reason">淡路島らしさと景色を優先。夜BBQなので昼は軽めにしやすい。</p>
+<button type="button" class="want" data-want="uzunooka">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E7%B5%B6%E6%99%AF%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%86%E3%81%9A%E3%81%AE%E4%B8%98%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8D%97%E3%81%82%E3%82%8F%E3%81%98%E5%B8%82%E7%A6%8F%E8%89%AF%E4%B8%99936-3" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://rest.uzunokuni.com/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 
@@ -35,6 +36,7 @@
 <div class="rank"><div class="num">2</div><div><h3>心鮮料理 万代</h3><div class="stars">★★★★★☆ <span>5/6</span></div><p class="price">おおよそ <strong>¥6,600〜</strong></p></div></div>
 <div class="tags"><span>地元魚</span><span>落ち着き</span><span>福良</span></div>
 <p class="reason">単価は高めだが、料理の満足度重視。24日昼は営業条件の確認推奨。</p>
+<button type="button" class="want" data-want="mandai">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E5%BF%83%E9%AE%AE%E6%96%99%E7%90%86%20%E4%B8%87%E4%BB%A3%20%E5%8D%97%E3%81%82%E3%82%8F%E3%81%98" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://www.awaji-mandai.jp/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 
@@ -42,6 +44,7 @@
 <div class="rank"><div class="num">3</div><div><h3>炉端焼き 山武水産</h3><div class="stars">★★★★★★ <span>6/6</span></div><p class="price">おおよそ <strong>¥1,000〜2,000</strong></p></div></div>
 <div class="tags"><span>安い</span><span>魚介</span><span>港感</span></div>
 <p class="reason">価格と気軽さで最強。絶景より、安く・早く・魚介を楽しむならここ。</p>
+<button type="button" class="want" data-want="yamatake">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E5%B1%B1%E6%AD%A6%E6%B0%B4%E7%94%A3%20%E7%A6%8F%E8%89%AF" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://yamatakesuisan.com/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 </section>
@@ -53,6 +56,7 @@
 <div class="rank"><div class="num">1</div><div><h3>囲炉裏食堂うずしお</h3><div class="stars">★★★★☆☆ <span>4/6</span></div><p class="price">おおよそ <strong>¥2,300〜3,000</strong></p></div></div>
 <div class="tags"><span>鳴門海峡</span><span>景色</span><span>土産も可</span></div>
 <p class="reason">2日目の動線と景色込みで本命。食後に展望・土産まで一気に終えられる。</p>
+<button type="button" class="want" data-want="irori">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%86%E3%81%9A%E3%81%97%E3%81%8A%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8D%97%E3%81%82%E3%82%8F%E3%81%98%E5%B8%82%E7%A6%8F%E8%89%AF%E4%B9947-22" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://eki.uzunokuni.com/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 
@@ -60,6 +64,7 @@
 <div class="rank"><div class="num">2</div><div><h3>絶景レストラン うずの丘</h3><div class="stars">★★★★☆☆ <span>4/6</span></div><p class="price">おおよそ <strong>¥1,650〜2,530</strong></p></div></div>
 <div class="tags"><span>絶景</span><span>海鮮</span><span>観光感</span></div>
 <p class="reason">24日に行かなかった場合の第二候補。景色重視なら強い。</p>
+<button type="button" class="want" data-want="uzunooka">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E7%B5%B6%E6%99%AF%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%86%E3%81%9A%E3%81%AE%E4%B8%98%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8D%97%E3%81%82%E3%82%8F%E3%81%98%E5%B8%82%E7%A6%8F%E8%89%AF%E4%B8%99936-3" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://rest.uzunokuni.com/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 
@@ -67,11 +72,29 @@
 <div class="rank"><div class="num">3</div><div><h3>心鮮料理 万代</h3><div class="stars">★★★★★☆ <span>5/6</span></div><p class="price">おおよそ <strong>¥6,600〜</strong></p></div></div>
 <div class="tags"><span>地元魚</span><span>落ち着き</span><span>料理重視</span></div>
 <p class="reason">観光施設より静かに魚料理を食べたい時の候補。</p>
+<button type="button" class="want" data-want="mandai">♡ 行きたい</button>
 <div class="actions"><a class="btn go" href="https://www.google.com/maps/dir/?api=1&destination=%E5%BF%83%E9%AE%AE%E6%96%99%E7%90%86%20%E4%B8%87%E4%BB%A3%20%E5%8D%97%E3%81%82%E3%82%8F%E3%81%98" target="_blank" rel="noopener">📍 ここに行く</a><a class="btn web" href="https://www.awaji-mandai.jp/" target="_blank" rel="noopener">公式WEB</a></div>
 </div></article>
 </section>
 
 <p class="foot">コスパ評価は今回の旅行条件向けの比較。価格・営業は当日前に公式WEBで再確認。</p>
 </div>
+<script>
+document.querySelectorAll('.want').forEach(btn=>{
+  const key='awaji-want-'+btn.dataset.want;
+  const sync=()=>{
+    const on=localStorage.getItem(key)==='1';
+    btn.classList.toggle('active',on);
+    btn.textContent=on?'♥ 行きたい済み':'♡ 行きたい';
+    btn.setAttribute('aria-pressed',on?'true':'false');
+  };
+  sync();
+  btn.addEventListener('click',()=>{
+    const on=localStorage.getItem(key)==='1';
+    localStorage.setItem(key,on?'0':'1');
+    sync();
+  });
+});
+</script>
 </body>
 </html>
