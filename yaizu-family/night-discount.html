@@ -8,7 +8,41 @@
 <style>
 :root{--bg:#07131b;--panel:#0d1d28;--panel2:#132b3a;--text:#f7f5ef;--muted:#b6c6ce;--accent:#ff9d52;--sea:#75cfdf;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans JP","Segoe UI",sans-serif;line-height:1.65;padding-bottom:85px}a{color:inherit}button,input{font:inherit}a:focus-visible,input:focus-visible{outline:3px solid var(--sea);outline-offset:3px}.wrap{width:min(calc(100% - 26px),840px);margin-inline:auto}.hero{position:relative;min-height:420px;display:flex;align-items:flex-end;background:#0b2434;overflow:hidden}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,9,15,.2),rgba(2,9,15,.7) 62%,#07131b)}.hero-inner{position:relative;z-index:2;padding:28px 0 55px}.back{display:inline-flex;min-height:40px;align-items:center;gap:6px;text-decoration:none;color:white;font-weight:900;font-size:13px;border-bottom:1px solid #fff7}.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--accent);font-weight:950;margin:18px 0 8px}.hero h1{font-size:clamp(40px,9vw,70px);line-height:1.07;letter-spacing:-.045em;margin:0 0 10px}.hero h1 span{color:var(--accent)}.hero p{margin:0;max-width:540px;font-weight:720;font-size:16px}.small{font-size:12px;color:var(--muted)}.summary{margin:-30px 0 0;position:relative;z-index:3;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:19px;box-shadow:0 15px 50px #0007}.summary h2{font-size:19px;margin:0 0 9px}.savings{font-weight:950;font-size:clamp(38px,10vw,66px);color:var(--accent);letter-spacing:-.04em;line-height:1}.summary p{color:var(--muted);margin:9px 0}.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.mini div{border:1px solid var(--line);border-radius:14px;background:var(--panel2);padding:13px}.mini b{display:block;font-size:22px}.mini small{color:var(--muted);font-size:11px}.section{padding:29px 0 6px}.section h2{font-size:clamp(26px,6.5vw,34px);margin:0 0 9px;line-height:1.18}.sub{color:var(--muted);font-size:14px;margin:0 0 15px}.chip{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:999px;font-weight:900;font-size:12px;padding:6px 10px}.card{background:var(--panel);border:1px solid var(--line);border-radius:21px;padding:18px;margin:13px 0}.card h3{margin:0 0 8px;font-size:21px}.card p{margin:5px 0}.muted{color:var(--muted)}.line{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}.line:last-child{border-bottom:none}.line b{white-space:nowrap;font-size:17px}.plus{color:var(--accent);font-weight:900}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:8px}.comparison>div{background:var(--panel2);border-radius:16px;padding:15px}.comparison span{display:block;font-size:12px;color:var(--muted);font-weight:800}.comparison strong{display:block;font-size:clamp(25px,5vw,32px);line-height:1.2}.comparison small{font-size:11px;color:var(--muted)}.scenario{display:grid;gap:12px}.switchrow{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:13px;background:var(--panel2);font-weight:820;cursor:pointer}.switchrow input{flex:0 0 22px;width:22px;height:22px;margin:2px 0 0;accent-color:var(--accent)}.switchrow span{display:block}.switchrow small{display:block;font-size:12px;font-weight:500;color:var(--muted)}.result{background:#193342;border-radius:19px;padding:20px;margin-top:13px}.result h3{margin:0 0 10px;font-size:20px}.number{color:var(--accent);font-size:clamp(40px,9vw,56px);font-weight:950;letter-spacing:-.05em;line-height:1.1}.result p{margin:6px 0;color:#e8f0f3}.route-list{margin:13px 0;padding-left:24px}.route-list li{padding:6px 0}.route-list li::marker{color:var(--accent)}.warn{border-left:4px solid var(--accent);background:#2c211c;padding:15px;border-radius:0 12px 12px 0;margin:14px 0;font-size:13px}.note{border-left:4px solid var(--sea);background:#102b38;padding:15px;border-radius:0 12px 12px 0;margin:14px 0;font-size:13px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.btn{border-radius:14px;padding:13px 10px;min-height:55px;display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;font-size:14px;font-weight:950}.btn.primary{color:#091721;background:#f7f5ef}.btn.secondary{background:var(--panel2)}.foot{text-align:center;color:var(--muted);font-size:12px;padding:22px 0 30px}.dock{position:fixed;z-index:10;bottom:calc(12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(calc(100% - 18px),560px);display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:#0c1d28f0;border:1px solid var(--line);border-radius:18px;padding:7px;backdrop-filter:blur(15px)}.dock a{background:var(--panel2);text-decoration:none;text-align:center;font-size:12px;font-weight:900;padding:12px 5px;border-radius:10px}@media(min-width:710px){.scenario{grid-template-columns:1fr 1fr}.card{padding:24px}.hero{min-height:500px}.section{padding:39px 0 7px}}@media(max-width:360px){.actions{grid-template-columns:1fr}.comparison strong{font-size:23px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+<link rel="stylesheet" href="./header.css">
 </head><body>
+<div class="yd-topbar" data-yd-header>
+  <div class="yd-topbar__inner">
+    <button type="button" id="yd-menu" class="yd-navbutton" aria-label="メニューを開く" aria-expanded="false" aria-controls="yd-menu-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><small>MENU</small>
+    </button>
+    <a class="yd-brand" href="./index.html" aria-label="焼津家族旅行のトップへ戻る">
+      <img src="./assets/brand/logo.png" width="272" height="93" alt="YAIZU FAMILY DRIVE" decoding="async">
+      <span class="yd-text-fallback" aria-hidden="true">YAIZU <span style="color:#ff9d52">FAMILY DRIVE</span></span>
+    </a>
+    <button type="button" id="yd-share" class="yd-navbutton" aria-label="このページのリンクを共有する">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.2"/><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="19" r="2.2"/><path d="M8 11l7.8-5M8 13l7.8 5"/></svg><small>共有</small>
+    </button>
+  </div>
+</div>
+<div class="yd-overlay" id="yd-menu-panel" role="dialog" aria-modal="true" aria-label="サイトメニュー" aria-hidden="true" inert hidden>
+  <div class="yd-overlay__wrap">
+    <div class="yd-overlay__head"><span class="yd-overlay__eyebrow">YAIZU / FAMILY DRIVE — MENU</span><button class="yd-overlay__close" id="yd-menu-close" type="button" aria-label="メニューを閉じる">×</button></div>
+    <nav class="yd-overlay__nav" aria-label="焼津旅行ページ一覧">
+      <a href="./index.html"><span>01</span> 旅行プラン TOP</a>
+      <a href="./index.html#route"><span>02</span> 高速ルート比較</a>
+      <a href="./index.html#sleep"><span>03</span> お風呂・シャワー・車中仮眠</a>
+      <a href="./themepark-special.html"><span>04</span> テーマパーク特設</a>
+      <a href="./theme-parks.html"><span>05</span> テーマパーク12施設比較</a>
+      <a href="./night-discount.html"><span>06</span> 高速道路・深夜割引</a>
+      <a href="./index.html#stay"><span>07</span> 焼津のホテル</a>
+      <a href="./index.html#budget"><span>08</span> 家族4人の予算</a>
+    </nav>
+    <p class="yd-overlay__note">料金・営業時間は訪問日の公式情報をご確認ください。</p>
+  </div>
+</div>
+<div class="yd-toast" id="yd-toast" role="status" aria-live="polite" hidden></div>
+
 <header class="hero">
 <img src="./assets/kariya-highway-oasis.jpg" alt="刈谷ハイウェイオアシスの写真。Oka21000によるCC0画像">
 <div class="hero-inner wrap">
@@ -114,4 +148,5 @@ for(const item of amounts){document.getElementById(item.id).addEventListener('ch
 render();
 })();
 </script>
+<script defer src="./header.js"></script>
 </body></html>
