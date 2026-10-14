@@ -24,3 +24,11 @@
 - `yaizu-family/theme-parks.html` — 名阪国道〜東名沿い12施設の写真付き比較。刈谷PAの手前/先、料金、雨天、ナビで絞り込み。旅行トップの予算セレクターとも連動した選択肢を掲載。
 - 既存の `awaji-camp/index.html` をデザインモデルとして使用。淡路島の旅行内容は変更しない。
 - 旅程日が未定のため、ホテルの家族4人での空室・料金、高速料金の全経路確定照会は未実施。写真は利用条件を確認できた素材を `yaizu-family/assets/` に保存し、`yaizu-family/PHOTO_CREDITS.md` に出典を記録。料金比較は松原〜天理＋亀山〜焼津のモデル区間に限定し、市内高速や途中降車分は含めない。
+
+### 焼津旅行サイト共通ヘッダー（2026-10-14）
+
+- 対象: `yaizu-family/index.html`、`themepark-special.html`、`theme-parks.html`、`night-discount.html`。
+- `yaizu-family/header.css` + `header.js` を全ページで共有し、左にハンバーガーメニュー、中央にトップへ戻る透過ロゴ、右にネイティブ共有／URLコピーを配置。
+- `yaizu-family/assets/brand/logo.png`: 背景透過PNG。 `assets/brand/favicon.svg`: 焼津旅行専用ファビコン。
+- メニューは全画面、Escキー・フォーカス管理・背面スクロール制御に対応。スクロール後のヘッダーは半透明の濃紺グラデーション。
+- モバイルでの最終実機検証は公開後に別途確認。外部の既存ページ（淡路島／沖縄）には変更を加えない。
