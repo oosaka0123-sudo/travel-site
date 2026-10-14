@@ -36,8 +36,42 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #ffd99e;o
 footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 0 28px}.dock{position:fixed;z-index:20;left:50%;transform:translateX(-50%);bottom:calc(9px + env(safe-area-inset-bottom));width:min(calc(100% - 18px),560px);display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:7px;border:1px solid var(--line);border-radius:18px;background:#0b1c28f2;backdrop-filter:blur(14px)}.dock a{background:#183344;border-radius:11px;padding:11px 3px;font-weight:850;text-decoration:none;text-align:center;font-size:11px}
 @media(min-width:760px){.route{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.lineup{grid-template-columns:repeat(2,1fr)}.feature img{height:225px}.hero-content{padding-bottom:112px}}@media(max-width:390px){.hero h1{font-size:45px}.ribbon .big{font-size:32px}.tags b{font-size:13px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+<link rel="stylesheet" href="./header.css">
 </head>
 <body>
+<div class="yd-topbar" data-yd-header>
+  <div class="yd-topbar__inner">
+    <button type="button" id="yd-menu" class="yd-navbutton" aria-label="メニューを開く" aria-expanded="false" aria-controls="yd-menu-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><small>MENU</small>
+    </button>
+    <a class="yd-brand" href="./index.html" aria-label="焼津家族旅行のトップへ戻る">
+      <img src="./assets/brand/logo.png" width="272" height="93" alt="YAIZU FAMILY DRIVE" decoding="async">
+      <span class="yd-text-fallback" aria-hidden="true">YAIZU <span style="color:#ff9d52">FAMILY DRIVE</span></span>
+    </a>
+    <button type="button" id="yd-share" class="yd-navbutton" aria-label="このページのリンクを共有する">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.2"/><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="19" r="2.2"/><path d="M8 11l7.8-5M8 13l7.8 5"/></svg><small>共有</small>
+    </button>
+  </div>
+</div>
+<div class="yd-overlay" id="yd-menu-panel" role="dialog" aria-modal="true" aria-label="サイトメニュー" aria-hidden="true" inert hidden>
+  <div class="yd-overlay__wrap">
+    <div class="yd-overlay__head"><span class="yd-overlay__eyebrow">YAIZU / FAMILY DRIVE — MENU</span><button class="yd-overlay__close" id="yd-menu-close" type="button" aria-label="メニューを閉じる">×</button></div>
+    <nav class="yd-overlay__nav" aria-label="焼津旅行ページ一覧">
+      <a href="./index.html"><span>01</span> 旅行プラン TOP</a>
+      <a href="./index.html#route"><span>02</span> 高速ルート比較</a>
+      <a href="./index.html#sleep"><span>03</span> お風呂・シャワー・車中仮眠</a>
+      <a href="./themepark-special.html"><span>04</span> テーマパーク特設</a>
+      <a href="./theme-parks.html"><span>05</span> テーマパーク12施設比較</a>
+      <a href="./night-discount.html"><span>06</span> 高速道路・深夜割引</a>
+      <a href="./index.html#stay"><span>07</span> 焼津のホテル</a>
+      <a href="./index.html#budget"><span>08</span> 家族4人の予算</a>
+    </nav>
+    <p class="yd-overlay__note">料金・営業時間は訪問日の公式情報をご確認ください。</p>
+  </div>
+</div>
+<div class="yd-toast" id="yd-toast" role="status" aria-live="polite" hidden></div>
+
 <header class="hero">
 <img class="hero-photo" src="./assets/hamanako-palpal.jpg" alt="浜名湖パルパルの園内（写真：Abasaa／Public domain）">
 <div class="wrap hero-content">
@@ -89,5 +123,6 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 0 28px}.
 </main>
 <footer>YAIZU FAMILY DRIVE / FAMILY THEME PARKS<br>掲載写真のライセンスは<a href="./PHOTO_CREDITS.md">出典一覧</a>に記載</footer>
 <nav class="dock" aria-label="固定メニュー"><a href="./index.html">旅トップ</a><a href="#route">高速ルート</a><a href="#recommend">おすすめ3選</a><a href="./theme-parks.html">全12施設</a></nav>
+<script defer src="./header.js"></script>
 </body>
 </html>
