@@ -32,3 +32,14 @@
 - `yaizu-family/assets/brand/logo.png`: 背景透過PNG。 `assets/brand/favicon.svg`: 焼津旅行専用ファビコン。
 - メニューは全画面、Escキー・フォーカス管理・背面スクロール制御に対応。スクロール後のヘッダーは半透明の濃紺グラデーション。
 - モバイルでの最終実機検証は公開後に別途確認。外部の既存ページ（淡路島／沖縄）には変更を加えない。
+
+## なんば駅発 → 静波海岸｜一般公開用（2026-10-19）
+
+- **公開トップ:** `shizunami-drive/index.html`。大阪・なんば駅を起点、静岡県牧之原市の静波海岸を終点に設定。
+- `shizunami-drive/themepark-special.html` — 途中で遊べるテーマパーク特設ページ。
+- `shizunami-drive/theme-parks.html` — 刈谷の100円遊園地を含む13施設の独自★5コスパ比較。
+- `shizunami-drive/night-discount.html` — 西名阪・名阪国道・亀山〜吉田ICの割引条件と簡易料金差計算。吉田IC向け未検証料金を断定しない。
+- `shizunami-drive/header.css`、`header.js`、`assets/brand/logo.svg`、`assets/brand/favicon.svg` — 共通ヘッダー・ロゴ・共有リンク。
+- 施設写真は既存の `yaizu-family/assets/` に格納されたライセンス確認済み素材を同じGitHub Pagesドメインから参照。静波海岸の写真はWikimedia Commons（久保嶋宏明／CC BY-SA 3.0）で写真下に帰属表記し、外部CDNに障害がある場合の代替画像を設定。
+- 一般公開向けはnoindexを使用せずindex/followを設定。旧 `yaizu-family/` は記録として残し、内容を混在させない。
+- 宿泊・高速・燃料代は日付未確定の予算例。吉田ICに向かう正式な料金・個別の日付料金は出発前に必ずNEXCO/宿の公式サイトで再照会。
