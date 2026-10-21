@@ -36,6 +36,7 @@
 @media(min-width:780px){.intro-neat{grid-template-columns:1fr 330px;align-items:center}.hero{min-height:650px}.compare-card{padding:22px}}
 @media(max-width:650px){.compare-grid{grid-template-columns:1fr}.compare-card h3{font-size:21px}.compare-card{padding:17px}.hero{min-height:75svh}.compare-prices{padding:15px 11px}.compare-table{font-size:12px}.compare-table td,.compare-table th{padding:11px 5px}.quicklinks{margin-inline:-10px;padding-inline:10px}}
 @media(max-width:350px){.compare-action{flex-wrap:wrap}.compare-action a{flex-basis:100%}.neat-stats span{font-size:10px}}
+.route-summary{position:relative}.anchor-legacy{position:relative;display:block;scroll-margin-top:90px}.summary-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.summary-route{display:flex;flex-direction:column;gap:5px;background:#163a4a;border:1px solid #ffffff2d;border-radius:16px;padding:17px}.summary-route span{color:#ffbc87;font-size:12px;font-weight:950}.summary-route strong{font-size:clamp(17px,3.5vw,23px);line-height:1.28}.summary-route small{color:#c0d7df;font-size:12px}.summary-bottom{background:linear-gradient(130deg,#1f4b5c,#13313e);padding:17px;margin-top:12px;border-radius:16px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}.summary-bottom p{margin:0;font-size:13px;color:#d7e8ed}.summary-bottom .summary-go{min-height:55px;padding:12px 18px}@media(max-width:680px){.summary-bottom{grid-template-columns:1fr}.summary-bottom .summary-go{width:100%}}@media(max-width:360px){.summary-row{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div class="yd-topbar" data-yd-header>
@@ -55,19 +56,20 @@
 <div class="yd-overlay" id="yd-menu-panel" role="dialog" aria-modal="true" aria-label="サイトメニュー" aria-hidden="true" inert hidden>
   <div class="yd-overlay__wrap">
     <div class="yd-overlay__head"><span class="yd-overlay__eyebrow">SHIZUNAMI / FAMILY DRIVE — MENU</span><button class="yd-overlay__close" id="yd-menu-close" type="button" aria-label="メニューを閉じる">×</button></div>
-    <nav class="yd-overlay__nav" aria-label="静波旅行メニュー">
+    <nav class="yd-overlay__nav" aria-label="静波ドライブサイトのメニュー">
 <a href="./index.html"><span>01</span> 旅行トップ</a>
-<a href="./index.html#route"><span>02</span> 行き帰り4ルート</a>
-<a href="./index.html#toll-fees"><span>03</span> 高速料金・割引</a>
-<a href="./index.html#schedule"><span>04</span> 旅程</a>
-<a href="./index.html#kariya"><span>05</span> 刈谷の遊びと温泉</a>
-<a href="./themepark-special.html"><span>06</span> テーマパーク13選</a>
-<a href="./index.html#shizunami"><span>07</span> 静波の観光</a>
-<a href="./index.html#food"><span>08</span> 静波のご飯</a>
-<a href="./index.html#stay"><span>09</span> ホテル</a>
-<a href="./index.html#budget"><span>10</span> 予算</a>
-<a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;destination=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%87%9D%E3%83%86%E3%83%A9%E3%82%B9%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%7C%E5%88%88%E8%B0%B7%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%AA%E3%82%A2%E3%82%B7%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82" target="_blank" rel="noopener noreferrer"><span>MAP</span> 行きGoogleマップ ↗</a>
-<a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;destination=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E6%96%B0%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%9C%9F%E5%B1%B1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%20%E4%B8%8B%E3%82%8A%20%E6%BB%8B%E8%B3%80%E7%9C%8C%7C%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%90%B9%E7%94%B0IC%20%E5%A4%A7%E9%98%AA%E5%BA%9C%7C%E6%96%B0%E5%BE%A1%E5%A0%82%E7%AD%8B%20%E5%8D%83%E9%87%8CIC%20%E5%A4%A7%E9%98%AA%E5%BA%9C" target="_blank" rel="noopener noreferrer"><span>MAP</span> 帰りGoogleマップ ↗</a>
+<a href="./routes-tolls.html"><span>02</span> 高速経路・料金の特設サイト</a>
+<a href="./routes-tolls.html#route-list"><span>03</span> 行き・帰り4ルート</a>
+<a href="./routes-tolls.html#compare"><span>04</span> ETC料金比較表</a>
+<a href="./routes-tolls.html#calculator"><span>05</span> 往復料金の計算</a>
+<a href="./routes-tolls.html#discounts"><span>06</span> 深夜・休日割引の条件</a>
+<a href="./index.html#schedule"><span>07</span> 旅程</a>
+<a href="./themepark-special.html"><span>08</span> テーマパーク13選</a>
+<a href="./index.html#kariya"><span>09</span> 刈谷の温泉・100円遊園地</a>
+<a href="./index.html#shizunami"><span>10</span> 静波の観光</a>
+<a href="./index.html#food"><span>11</span> 静波のご飯</a>
+<a href="./index.html#stay"><span>12</span> 静波のホテル</a>
+<a href="./index.html#budget"><span>13</span> 家族4人の旅行予算</a>
 </nav>
     <p class="yd-overlay__note">料金・営業時間は訪問日の公式情報をご確認ください。刈谷の乗り物は季節・曜日で営業終了時刻が異なります。</p>
   </div>
@@ -80,26 +82,18 @@
 <div class="wrap hero-in"><p class="eyebrow">OSAKA NAMBA → SHIZUNAMI / FAMILY ROAD TRIP</p>
 <h1>なんばから、<br><em>静波の海へ。</em></h1><p class="lead">行き帰り4ルートを比較。温泉も遊園地も、静波の海も。</p>
 <div class="pills"><span>出発：大阪・難波駅</span><span>目的地：静波海岸</span><span>大人2＋小学生2のモデル</span></div>
-<div class="buttons route-primary-actions"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;destination=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%87%9D%E3%83%86%E3%83%A9%E3%82%B9%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%7C%E5%88%88%E8%B0%B7%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%AA%E3%82%A2%E3%82%B7%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82" target="_blank" rel="noopener noreferrer" aria-label="行き、なんばから名阪国道と刈谷経由で静波までのGoogleマップを開く">🚗 行きのルートをGoogleマップで開く ↗</a><a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;destination=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E6%96%B0%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%9C%9F%E5%B1%B1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%20%E4%B8%8B%E3%82%8A%20%E6%BB%8B%E8%B3%80%E7%9C%8C%7C%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%90%B9%E7%94%B0IC%20%E5%A4%A7%E9%98%AA%E5%BA%9C%7C%E6%96%B0%E5%BE%A1%E5%A0%82%E7%AD%8B%20%E5%8D%83%E9%87%8CIC%20%E5%A4%A7%E9%98%AA%E5%BA%9C" target="_blank" rel="noopener noreferrer" aria-label="帰り、静波から新名神・吹田・新御堂筋経由でなんばまでのGoogleマップを開く">🚙 帰りのルートをGoogleマップで開く ↗</a></div>
+<div class="buttons route-primary-actions"><a class="btn" href="./routes-tolls.html">🛣️ 高速経路・料金を比較 ↗</a><a class="btn dark" href="#schedule">家族旅行プランを見る ↓</a></div>
 <div class="photo-note" id="beach-credit">静波海岸写真：久保嶋宏明 / <a href="https://commons.wikimedia.org/wiki/File:Shizunami_Beach2.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a>（原写真を画面に合わせCSSトリミング表示）</div>
 </div></header>
 <main class="wrap">
-<section class="intro intro-neat"><div><p class="eyebrow">OSAKA NAMBA → SHIZUNAMI BEACH</p><h2>なんばから静波へ。<br>迷わず、楽しく。</h2><p>まずルートを選んで、途中で遊んで、静波の海へ。家族4人の旅程・グルメ・宿泊・予算を1ページに整理しました。</p></div><div class="neat-stats"><span><b>4</b>ルート</span><span><b>13</b>遊び場</span><span><b>1</b>目的地</span></div></section>
-<nav class="quicklinks" aria-label="ページ内の案内"><a href="#route">ルート4択</a><a href="#schedule">旅程</a><a href="#kariya">刈谷・遊び</a><a href="#shizunami">静波観光</a><a href="#food">ご飯</a><a href="#stay">ホテル</a><a href="#budget">予算</a></nav>
-<section class="section" id="route">
-<div class="part-heading"><span>01</span><div><p class="eyebrow">ROUTE & GOOGLE MAPS</p><h2>行きも帰りも、2択。</h2><p class="sub">行き2ルート、帰り2ルート。地図と料金をここにまとめました。</p></div></div>
-<div class="compare-direction"><div class="compare-direction-title"><b>GO →</b><div><h3>行き｜なんば駅 → 静波海岸</h3><p>名阪国道で節約するか、阪神高速から新名神へ向かうか。</p></div></div><div class="compare-grid">
-<article class="compare-card compare-card-main"><div class="compare-card-top"><b class="compare-letter">A</b><span>既存のおすすめルート</span></div><h3>名阪国道で節約</h3><p class="compare-road">西名阪 → 名阪国道（無料） → 東名阪 → 伊勢湾岸 → 東名</p><p class="compare-via">針テラス → 刈谷 → 吉田IC → 静波海岸</p><div class="compare-action"><div><small>通常ETC料金</small><strong>6,350円</strong></div><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;destination=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%87%9D%E3%83%86%E3%83%A9%E3%82%B9%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%7C%E5%88%88%E8%B0%B7%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%AA%E3%82%A2%E3%82%B7%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82" target="_blank" rel="noopener noreferrer" aria-label="行きの名阪国道で節約をGoogleマップで表示">Googleマップ ↗</a></div></article>
-<article class="compare-card compare-card-alt" id="full-highway"><div class="compare-card-top"><b class="compare-letter">B</b><span>有料高速中心</span></div><h3>フル高速で行く</h3><p class="compare-road">阪神高速 → 近畿道 → 名神 → 新名神 → 伊勢湾岸 → 東名</p><p class="compare-via">土山SA → 刈谷 → 吉田IC → 静波海岸</p><div class="compare-action"><div><small>通常ETC料金</small><strong>別途照会</strong></div><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;destination=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E6%96%B0%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%9C%9F%E5%B1%B1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%20%E4%B8%8A%E3%82%8A%20%E6%9D%B1%E4%BA%AC%E3%83%BB%E4%BC%8A%E5%8B%A2%E6%96%B9%E9%9D%A2%7C%E5%88%88%E8%B0%B7%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%AA%E3%82%A2%E3%82%B7%E3%82%B9%20%E4%BC%8A%E5%8B%A2%E6%B9%BE%E5%B2%B8%E8%87%AA%E5%8B%95%E8%BB%8A%E9%81%93" target="_blank" rel="noopener noreferrer" aria-label="行きのフル高速で行くをGoogleマップで表示">Googleマップ ↗</a></div></article>
-</div></div>
-<div class="compare-direction" id="return-route"><div class="compare-direction-title"><b class="compare-back">← BACK</b><div><h3>帰り｜静波海岸 → なんば駅</h3><p>吹田ICで降りるか、阪神高速でなんばまで戻るか。</p></div></div><div class="compare-grid">
-<article class="compare-card compare-card-main"><div class="compare-card-top"><b class="compare-letter">C</b><span>既存のおすすめルート</span></div><h3>新名神 → 吹田 → 新御堂筋</h3><p class="compare-road">東名 → 伊勢湾岸 → 新名神 → 名神 → 吹田IC → 新御堂筋</p><p class="compare-via">土山SA → 吹田IC → 千里IC → なんば駅</p><div class="compare-action"><div><small>通常ETC料金</small><strong>7,480円</strong></div><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;destination=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E6%96%B0%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%9C%9F%E5%B1%B1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%20%E4%B8%8B%E3%82%8A%20%E6%BB%8B%E8%B3%80%E7%9C%8C%7C%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%90%B9%E7%94%B0IC%20%E5%A4%A7%E9%98%AA%E5%BA%9C%7C%E6%96%B0%E5%BE%A1%E5%A0%82%E7%AD%8B%20%E5%8D%83%E9%87%8CIC%20%E5%A4%A7%E9%98%AA%E5%BA%9C" target="_blank" rel="noopener noreferrer" aria-label="帰りの新名神 → 吹田 → 新御堂筋をGoogleマップで表示">Googleマップ ↗</a></div></article>
-<article class="compare-card compare-card-alt"><div class="compare-card-top"><b class="compare-letter">D</b><span>有料高速中心</span></div><h3>フル高速で帰る</h3><p class="compare-road">東名 → 伊勢湾岸 → 新名神 → 名神 → 近畿道 → 阪神高速</p><p class="compare-via">土山SA → 東大阪JCT → なんば出口</p><div class="compare-action"><div><small>通常ETC料金</small><strong>別途照会</strong></div><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9D%99%E6%B3%A2%E6%B5%B7%E5%B2%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82&amp;destination=%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82&amp;travelmode=driving&amp;waypoints=%E6%96%B0%E5%90%8D%E7%A5%9E%E9%AB%98%E9%80%9F%E9%81%93%E8%B7%AF%20%E5%9C%9F%E5%B1%B1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%20%E4%B8%8B%E3%82%8A%20%E5%A4%A7%E9%98%AA%E6%96%B9%E9%9D%A2%7C%E9%98%AA%E7%A5%9E%E9%AB%98%E9%80%9F1%E5%8F%B7%E7%92%B0%E7%8A%B6%E7%B7%9A%20%E3%81%AA%E3%82%93%E3%81%B0%E5%87%BA%E5%8F%A3" target="_blank" rel="noopener noreferrer" aria-label="帰りのフル高速で帰るをGoogleマップで表示">Googleマップ ↗</a></div></article>
-</div></div>
-<div class="compare-prices" id="toll-fees"><div class="compare-prices-head"><div><p class="eyebrow">ETC FARES</p><h3>高速代もひと目で。</h3></div><a href="./night-discount.html#toll-prices">割引条件の詳細 ↗</a></div>
-<div class="compare-scroll"><table class="compare-table"><thead><tr><th>従来ルート</th><th>通常ETC</th><th>深夜割引</th><th>休日割引</th></tr></thead><tbody><tr><th>行き A</th><td>6,350円</td><td>4,450円</td><td>4,700円</td></tr><tr><th>帰り C</th><td>7,480円</td><td>5,240円</td><td>5,560円</td></tr><tr class="compare-total"><th>往復</th><td>13,830円</td><td>9,690円</td><td>10,260円</td></tr></tbody></table></div>
-<p class="compare-remarks">普通車・掲載IC間の参考値。深夜・休日は条件を満たす場合のみ適用され、重複しません。<b>フル高速B・Dは別料金</b>。都市高速・途中出入りの料金も要確認。</p></div>
-<div class="compare-alert">Googleマップは渋滞・規制によって経路を再計算します。クリック後に名阪国道・新名神・吹田IC・阪神高速など希望する道路を通るか確認してください。</div>
+<section class="intro intro-neat"><div><p class="eyebrow">OSAKA NAMBA → SHIZUNAMI BEACH</p><h2>なんばから静波へ。<br>迷わず、楽しく。</h2><p>高速道路・料金は特設ページで比較。ここでは家族4人の旅程・寄り道・静波の観光・グルメ・宿・予算を案内します。</p></div><div class="neat-stats"><span><b>4</b>ルート</span><span><b>13</b>遊び場</span><span><b>1</b>目的地</span></div></section>
+<nav class="quicklinks" aria-label="ページ内の案内"><a href="./routes-tolls.html">高速料金・経路</a><a href="#schedule">旅程</a><a href="#kariya">刈谷・遊び</a><a href="#shizunami">静波観光</a><a href="#food">ご飯</a><a href="#stay">ホテル</a><a href="#budget">予算</a></nav>
+<section class="section route-summary" id="route">
+<span id="return-route" class="anchor-legacy"></span><span id="full-highway" class="anchor-legacy"></span><span id="toll-fees" class="anchor-legacy"></span>
+<div class="part-heading"><span>01</span><div><p class="eyebrow">ROUTES & ETC · SPECIAL GUIDE</p><h2>行きも帰りも。<br>ルートと料金は1ページで。</h2><p class="sub">大阪なんば⇄静波海岸。無料の名阪国道とフル高速、新御堂筋経由など、行き2択・帰り2択を比較します。</p></div></div>
+<div class="summary-row"><div class="summary-route"><span>行き</span><strong>A 名阪国道</strong><small>または B フル高速</small></div><div class="summary-route"><span>帰り</span><strong>C 新名神→吹田</strong><small>または D フル高速</small></div></div>
+<div class="summary-bottom"><p><b>ETC通常・深夜・休日の比較表</b>も、往復料金シミュレーターも特設ページに集約しました。</p>
+<a class="btn summary-go" href="./routes-tolls.html">🛣️ 高速経路・料金の特設サイトへ ↗</a></div>
 </section>
 <div class="chapter-line"><b>02</b><span><small>TRIP SCHEDULE</small><strong>旅の流れ</strong></span></div>
 <section class="section" id="schedule"><p class="eyebrow">MODEL ITINERARY</p><h2>1泊＋運転休憩のモデル</h2><p class="sub">到着時刻は交通状況と出発時刻で変わるため、時刻を固定せず無理のない順番だけ掲載しています。</p><div class="flow">
@@ -166,7 +160,7 @@
 <label for="activity" style="display:block;font-weight:850;font-size:14px;margin:15px 0 7px">途中で遊ぶ場所を選択</label>
 <select id="activity"><option value="400">刈谷100円遊具4回分：400円</option><option value="0">岩ケ池公園無料遊具：0円</option><option value="2400">刈谷観覧車4人分：2,400円</option><option value="2800">刈谷遊具＋観覧車：2,800円</option><option value="4400">のんほいパーク：4,400円</option><option value="6000">掛川花鳥園：6,000円</option><option value="16000">ラグナシア：16,000円〜</option></select>
 <p class="eyebrow" style="margin-top:19px">TOTAL ESTIMATE / HIGHWAY DISCOUNT NOT INCLUDED</p><div class="estimate" id="total">52,070〜81,190円</div><p style="font-size:12px;color:var(--muted)">通常ETCの高速料金13,830円を含むモデル合計。深夜・休日割引を選ぶ場合は料金比較ページで差額を確認してください。難波〜松原の市内高速、観光によるIC出入り、宿泊日の料金変動や駐車代は別です。</p></div>
-<div class="buttons" style="margin-top:15px"><a class="btn" href="./night-discount.html">🌙 深夜割引の詳細を見る</a><a class="btn dark" href="https://www.driveplaza.com/" target="_blank" rel="noopener noreferrer">NEXCO公式で料金検索 ↗</a></div>
+<div class="buttons" style="margin-top:15px"><a class="btn" href="./routes-tolls.html">🛣️ 高速料金・経路の比較を見る</a><a class="btn dark" href="https://www.driveplaza.com/" target="_blank" rel="noopener noreferrer">NEXCO公式で料金検索 ↗</a></div>
 </section>
 
 <section class="section" id="sources"><p class="eyebrow">OFFICIAL SOURCES &amp; NOTES</p><h2>出発前に確認しておこう</h2>
@@ -176,6 +170,6 @@
 
 </main>
 <footer class="footer">SHIZUNAMI FAMILY DRIVE — 大阪なんば発・静波海岸行き<br>個人制作の旅行ガイド。観光施設・自治体・道路会社の公式サービスではありません。</footer>
-<nav class="dock" aria-label="固定メニュー"><a href="#route">4ルート</a><a href="#schedule">旅程</a><a href="#food">ご飯</a><a href="#budget">予算</a></nav>
+<nav class="dock" aria-label="固定メニュー"><a href="./routes-tolls.html">高速MAP</a><a href="#schedule">旅程</a><a href="#food">ご飯</a><a href="#budget">予算</a></nav>
 <script>(function(){const choice=document.getElementById('activity'),price=document.getElementById('activity-price'),total=document.getElementById('total');function update(){const n=Number(choice.value)||0;price.textContent=n.toLocaleString('ja-JP')+'円';total.textContent=(51670+n).toLocaleString('ja-JP')+'〜'+(80790+n).toLocaleString('ja-JP')+'円'}choice.addEventListener('change',update);update()})();</script>
 <script defer src="./header.js"></script></body></html>
