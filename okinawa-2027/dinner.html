@@ -16,8 +16,15 @@ html{scroll-padding-top:18px}body{padding-bottom:110px}.wrap{max-width:760px}.he
 @media(min-width:700px){.photo img{height:350px}}
 @media(max-width:490px){.quick{grid-template-columns:repeat(2,1fr)}.quick a{min-height:42px}.hero{min-height:72svh}.hero h1{font-size:clamp(54px,16.5vw,82px)}.hero p{font-size:15px}.planner-grid{grid-template-columns:1fr}.planner label{margin-bottom:4px}.photo img{height:245px}.rating-row .stars{font-size:20px}.family-price{align-items:start}.dinner-card .meta{grid-template-columns:1fr 1fr}.dinner-card .meta strong{font-size:11px}.dinner-card .actions .btn-go{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Renaissance official dinner menu / appended after other content */
+.hotel-menu-card{border-color:rgba(91,197,218,.21)}.hotel-menu-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.hotel-menu-head h3{margin:14px 0 3px;font-size:clamp(22px,5vw,27px)}.hotel-menu-cat{color:#aacbd2;font-size:12px;font-weight:700;margin:0 0 8px}.hotel-icon{font-size:29px}.hotel-price-adult{font-size:13px;font-weight:900;color:#fce0a8;margin:12px 0}.hotel-days{color:#b7f1d0;font-size:12px;font-weight:900;padding:10px 12px;border:1px solid rgba(122,199,166,.25);border-radius:10px;background:#19352e;margin:14px 0}.hotel-menu-card .family-price strong{font-size:clamp(21px,5vw,29px)}.hotel-menu-card .shop-desc{font-size:13px}.hotel-menu-card .actions .btn{font-size:13px}
+
+/* Hamburger: available only on the Okinawa dinner special */
+.special-hamburger{position:fixed;right:12px;top:calc(12px + env(safe-area-inset-top));z-index:150;background:#071c2be8;border:1px solid #ffffff4e;color:#fff;border-radius:13px;padding:11px 13px;font-size:21px;line-height:1;min-width:47px;min-height:47px;box-shadow:0 8px 25px #0007;backdrop-filter:blur(12px)}.special-overlay[hidden]{display:none!important}.special-overlay{position:fixed;z-index:160;inset:0;background:#020b12d9;padding:20px;backdrop-filter:blur(13px);display:flex;align-items:center;justify-content:center}.special-overlay>div{width:min(96%,450px);border-radius:20px;background:#102c39;border:1px solid #ffffff38;padding:23px;box-shadow:0 20px 55px #0008}.special-close{display:block;margin-left:auto;border:1px solid #ffffff55;background:#1c3e4b;border-radius:10px;color:#fff;font-size:18px;padding:7px 14px}.special-overlay h2{font-size:25px;margin:7px 0 20px}.special-overlay a{display:block;padding:15px 14px;border:1px solid #ffffff2e;border-radius:12px;text-decoration:none;font-weight:900;margin:9px 0;font-size:14px;background:#183644}.special-overlay a:focus-visible,.special-hamburger:focus-visible{outline:3px solid #78e8f0}
 </style>
-</head><body>
+</head><body><button id="specialToggle" class="special-hamburger" type="button" aria-controls="specialOverlay" aria-expanded="false" aria-label="特設メニューを開く">☰</button>
+<div id="specialOverlay" class="special-overlay" hidden><div role="dialog" aria-modal="true" aria-label="晩ご飯特設メニュー"><button class="special-close" type="button" id="specialClose">✕ 閉じる</button><p class="eyebrow">DINNER SPECIAL MENU</p><h2>晩ご飯ガイド</h2><a href="#ranking">★ 晩ご飯 BEST9</a><a href="dinner-map.html">🗺 お店の地図ページ</a><a href="#hotel-dinner-menu">🏨 ホテル内ディナーメニュー</a><a href="index.html">🏝 沖縄旅行トップへ</a></div></div>
 <header class="hero">
 <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Okinawan%20cuisine%20set.jpg?width=1300" alt="沖縄料理の盛り付け（料理の参考写真）" fetchpriority="high" onerror="this.style.display='none'">
 <div class="hero-inner"><p class="eyebrow">OKINAWA FOOD GUIDE / JANUARY 2027</p>
@@ -32,7 +39,7 @@ html{scroll-padding-top:18px}body{padding-bottom:110px}.wrap{max-width:760px}.he
 <div class="meta"><div><small>比較対象</small><strong>9施設</strong></div><div><small>人数</small><strong>大人2＋13歳＋9歳</strong></div><div><small>夕食の最低目安</small><strong>4人で約4千円〜</strong></div><div><small>宿泊</small><strong>ルネッサンス3連泊</strong></div></div>
 <div class="alert"><strong>重要：料金の見方</strong><p>★と点数は本サイト独自の「家族向け満足度・アクセス・コスパ」評価で、Googleや食べログの口コミ点数ではありません。家族4人の予算はメニューを基にした試算で、公式のセット価格ではありません。飲酒・追加注文で増減します。</p></div>
 </section>
-<nav class="quick"><a href="#ranking">★ランキング</a><a href="#planner">💴 3夜予算</a><a href="#days">📅 どの日に行く？</a><a href="#sources">📖 公式確認</a></nav>
+<nav class="quick"><a href="#ranking">★ランキング</a><a href="#planner">💴 3夜予算</a><a href="dinner-map.html">🗺 お店の地図</a><a href="#hotel-dinner-menu">🏨 ホテルの夕食</a><a href="#days">📅 どの日に行く？</a><a href="#sources">📖 公式確認</a></nav>
 <section class="section" id="ranking"><p class="eyebrow">EDITOR'S CHOICE / DINNER 9</p><h2>家族向けディナーランキング</h2><p class="sub">淡路島釣りキャンプ版と同じ大きな写真付きカード。各カードから「ここに行く」を押して、ホテルからの経路案内を開けます。</p>
 <div class="ranking-legend"><strong>★の基準</strong><p>★★★★★ = 旅行中の4人家族に特にすすめたい ／ ★★★★☆ = 目的が合えば魅力的 ／ ★★★☆☆ = 早めの軽食向け。味を実食して評価したものではありません。<br>移動時間はおおまかな想定で、道路事情で変わります。</p></div>
 <div class="sort-row" role="group" aria-label="レストランを絞る"><button class="filter-btn" data-filter="all" aria-pressed="true">すべて</button><button class="filter-btn" data-filter="cheap" aria-pressed="false">1万円以内</button><button class="filter-btn" data-filter="experience" aria-pressed="false">沖縄料理・民謡</button><button class="filter-btn" data-filter="premium" aria-pressed="false">肉・しゃぶしゃぶ</button><button class="filter-btn" data-filter="hotel" aria-pressed="false">ホテル内</button></div>
@@ -236,9 +243,71 @@ html{scroll-padding-top:18px}body{padding-bottom:110px}.wrap{max-width:760px}.he
 <div class="foot-buttons"><a href="./index.html">← 沖縄旅行トップに戻る</a><a href="../awaji-camp/">淡路島版のデザインを見る</a></div>
 </div></div>
 </section>
+<section class="section" id="hotel-dinner-menu">
+<p class="eyebrow">HOTEL DINNER MENU / AT THE VERY END</p>
+<h2>ホテルのディナー<br>全6レストラン</h2>
+<p class="sub">ルネッサンス館内で夕食を取る場合のメニュー・料金・営業日を比較。2026年11月18日時点の公式掲載情報です。1月18日（月）〜20日（水）の定休日も確認できるようにしました。</p>
+<div class="ranking-legend"><strong>料金と年齢区分の注意</strong><p>家族4人は大人2人＋13歳＋9歳。料金例では13歳を大人料金、9歳を小学生料金・キッズ料理として計算しています。<b>2027年1月の9歳無料ディナー特典は未確認</b>。無料になる前提では予約しないでください。</p></div>
+<article class="card hotel-menu-card" id="hotel-sailfish"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">1 / HOTEL DINNER</span><h3>セイルフィッシュカフェ</h3><p class="hotel-menu-cat">地中海＆琉球ブッフェ</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>4人分の計算例／公式価格ではありません</small><strong>家族4人 ¥21,000</strong></span></div>
+<p class="hotel-price-adult">大人 ¥6,000 / 小学生 ¥3,000</p><p class="shop-desc">海の食文化を取り入れたブッフェ。ライブキッチン、郷土料理を含むメニュー。月・火の夕食候補。</p>
+<div class="hotel-days">1/18（月）◯・1/19（火）◯・1/20（水）休</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>13歳は大人3人目として計算。9歳の無料ディナー特典は適用確認後に再試算。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-sailfishcafe/">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：17:30〜21:30／水曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<article class="card hotel-menu-card" id="hotel-loys"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">2 / HOTEL DINNER</span><h3>ロイズ寿司バー</h3><p class="hotel-menu-cat">ファミリーSUSHIバイキング</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>4人分の計算例／公式価格ではありません</small><strong>家族4人 ¥24,500</strong></span></div>
+<p class="hotel-price-adult">大人 ¥7,000 / 小学生 ¥3,500</p><p class="shop-desc">握り・島寿司・手巻き寿司・キッズコーナー・沖縄スイーツが食べ放題。水曜はマグロ一刀おろしのイベント案内あり。</p>
+<div class="hotel-days">1/18（月）◯・1/19（火）◯・1/20（水）◯</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>大人3人×7,000円＋9歳3,500円。無料特典が適用されれば差額が出ます。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-loys">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：17:30〜21:30／金曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<article class="card hotel-menu-card" id="hotel-umikaji"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">3 / HOTEL DINNER</span><h3>海風（うみかじ）</h3><p class="hotel-menu-cat">琉球炭火焼・沖縄郷土料理</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>料金の目安</small><strong>コース例 4人 ¥20,400</strong></span></div>
+<p class="hotel-price-adult">エイサー ¥6,000 / ハーリー ¥8,000 / キッズ炭火焼 ¥2,400</p><p class="shop-desc">あぐー豚盛り合わせ2,200円、ジーマーミ豆腐500円、ゴーヤーチャンプルー850円、ラフテー1,200円などの単品も選べます。</p>
+<div class="hotel-days">1/18（月）◯・1/19（火）◯・1/20（水）◯</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>6,000円コースを13歳含む3人分＋9歳キッズ2,400円とした仮の組み合わせ。注文条件を確認。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-umikaji">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：17:00〜23:00／日曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<article class="card hotel-menu-card" id="hotel-coral"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">4 / HOTEL DINNER</span><h3>コーラルシービュー</h3><p class="hotel-menu-cat">海上レストラン・ハワイアンBBQ</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>料金の目安</small><strong>4人総額は要確認</strong></span></div>
+<p class="hotel-price-adult">BBQコース 1人 ¥7,000 / ¥9,000 / ¥12,000</p><p class="shop-desc">厚切りビーフ・魚介の海上BBQとハワイアンブッフェ。ブッフェ単体の案内は大人2,800円・小学生1,400円。</p>
+<div class="hotel-days">1/18（月）◯・1/19（火）◯・1/20（水）◯</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>大人3人＋9歳のBBQコース／ブッフェ利用条件が不明なため、家族総額を断定せずホテルで見積もり。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-coralseaview">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：17:30〜21:30／木曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<article class="card hotel-menu-card" id="hotel-irodori"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">5 / HOTEL DINNER</span><h3>日本料理 彩（いろどり）</h3><p class="hotel-menu-cat">アグーしゃぶしゃぶ・和食会席</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>4人分の計算例／公式価格ではありません</small><strong>組合せ例 4人 ¥31,700</strong></span></div>
+<p class="hotel-price-adult">アグーしゃぶしゃぶ ¥9,800 / キッズ玉手箱 ¥2,300</p><p class="shop-desc">沖縄食材の会席、アグーしゃぶしゃぶ、和牛すきやきなど。会席は2名からなど条件あり。</p>
+<div class="hotel-days">1/18（月）休・1/19（火）◯・1/20（水）◯</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>アグーしゃぶしゃぶを13歳含む3人分×9,800円＋9歳キッズ2,300円の仮計算。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-irodori">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：17:30〜21:30／月曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<article class="card hotel-menu-card" id="hotel-four"><div class="card-body">
+<div class="hotel-menu-head"><div><span class="badge sea">6 / HOTEL DINNER</span><h3>フォーシーズン</h3><p class="hotel-menu-cat">フレンチ・鉄板焼</p></div><span class="hotel-icon">🏨</span></div>
+<div class="family-price"><span><small>4人分の計算例／公式価格ではありません</small><strong>家族総額はコース選択次第</strong></span></div>
+<p class="hotel-price-adult">フレンチ ¥8,000／¥12,000、鉄板焼 ¥13,000〜</p><p class="shop-desc">沖縄食材の本格フレンチや鉄板焼。大人3名が8,000円コースなら24,000円からで、9歳用メニューは別途確認。</p>
+<div class="hotel-days">1/18（月）◯・1/19（火）休・1/20（水）◯</div>
+<div class="note"><strong>計算・予約上の注意</strong><p>お子さん向けメニュー・ドレスコードと13歳のコース扱いを予約時に確認。</p></div>
+<div class="actions"><a class="btn btn-go" target="_blank" rel="noopener" href="https://renaissance-okinawa.com/pages/restaurants-fourseasons/">📖 公式ディナーメニュー</a><a class="btn btn-sub" href="tel:0989650707">☎ ホテルに確認</a></div>
+<p class="source">営業時間：18:00〜22:00／火曜日定休 ／ 公式掲載料金・メニューを要約。2027年1月の営業は変更の可能性があります。</p>
+</div></article>
+<div class="note"><strong>外食と迷ったときは</strong><p>予算重視ならシーサイドドライブインや浜の家、ホテルで過ごすなら海風・ロイズ・セイルフィッシュが比較しやすい選択肢です。水曜はセイルフィッシュのディナー定休、月曜は彩、火曜はフォーシーズンが定休予定です。</p></div>
+<div class="foot-buttons"><a href="dinner-map.html">📍 周辺9店の地図ページ</a><a href="#ranking">★ 外食ランキングに戻る</a></div>
+</section>
 </main>
 <nav class="bottom" aria-label="下部のクイックナビ">
-<a href="./index.html"><span>🏝</span>旅程へ</a><a href="#ranking"><span>⭐</span>店を探す</a><a href="#planner"><span>💴</span>予算</a><a href="#days"><span>📅</span>3夜計画</a></nav>
+<a href="./index.html"><span>🏝</span>旅程へ</a><a href="#ranking"><span>⭐</span>店を探す</a><a href="#planner"><span>💴</span>予算</a><a href="dinner-map.html"><span>🗺</span>地図</a></nav>
 <footer class="footer wrap">OKINAWA DINNER SPECIAL 2027 / YEARLY TRIP<br>写真・料金の情報源は各カードと下部に表示。家族向け評価は編集上の独自基準です。</footer>
 <script>
 (function(){
@@ -261,5 +330,5 @@ let fav=[];try{fav=JSON.parse(localStorage.getItem(wishKey)||"[]")}catch(e){}
 const favBoxes=[...document.querySelectorAll("[data-like]")];favBoxes.forEach(b=>{b.checked=fav.includes(b.dataset.like);b.addEventListener("change",()=>{const xs=favBoxes.filter(x=>x.checked).map(x=>x.dataset.like);document.getElementById("favoritesLabel").textContent="お気に入り "+xs.length+" 件";try{localStorage.setItem(wishKey,JSON.stringify(xs))}catch(e){}})});
 document.getElementById("favoritesLabel").textContent="お気に入り "+favBoxes.filter(b=>b.checked).length+" 件";
 })();
-</script>
+(function(){const t=document.getElementById("specialToggle"),o=document.getElementById("specialOverlay"),x=document.getElementById("specialClose");const close=()=>{o.hidden=true;t.setAttribute("aria-expanded","false");document.body.style.overflow="";t.focus()};t.addEventListener("click",()=>{o.hidden=false;t.setAttribute("aria-expanded","true");document.body.style.overflow="hidden";x.focus()});x.addEventListener("click",close);o.addEventListener("click",e=>{if(e.target===o)close()});o.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{o.hidden=true;document.body.style.overflow="";t.setAttribute("aria-expanded","false")}));document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!o.hidden)close()})})();</script>
 </body></html>
